@@ -4,56 +4,46 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <link rel="stylesheet" href="./src/css/reset.css" />
-    <link rel="stylesheet" href="./src/css/style.css" />
-
-    <title>Lista de Produtos - Continuação</title>
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <title>Lista de Produtos | Hugo Bler</title>
   </head>
   <body>
-    <!-- CABEÇALHO -->
     <header>
-      <div id="filters" class="filtersContainer">
-        <button class="estiloGeralBotoes estiloGeralBotoes--mostrarTodos">
-          Mostrar Todos
-        </button>
-        <button class="estiloGeralBotoes estiloGeralBotoes--filtrarHortifruti">
-          Mostrar Hortifruti
-        </button>
-
-        <div class="containerBuscaPorNome">
-          <input
-            type="text"
-            placeholder="Nome do produto"
-            class="campoBuscaPorNome"
-          />
-          <button
-            class="estiloGeralBotoes estiloGeralBotoes--botaoBuscaPorNome"
-          >
-            Buscar
-          </button>
-        </div>
-      </div>
+      <h1>Shop Now</h1>
     </header>
-
-    <main>
-      <div class="containerListaProdutos" id="listProdutos">
-        <ul>
-          <!-- LISTA DE PRODUTOS -->
-        </ul>
+    <nav>
+      <section class="nav__filters"></section>
+      <section class="nav__search">
+        <input
+          type="text"
+          class="nav__search-bar"
+          id="search-bar"
+          placeholder="digite para pesquisar..."
+        />
+        <button class="nav__search-btn" id="search">Pesquisar</button>
+      </section>
+    </nav>
+    <aside class="info">
+      <div class="info__div info__div--timer">
+        <small>você entrou no site a &nbsp;</small>
+        <small id="timer"></small>
       </div>
-
-      <div id="carrinho" class="containerCarrinho">
-        <ul>
-          <!-- ITENS ADICIONADOS AO CARRINHO -->
-        </ul>
-
-        <div class="containerPrecoTotal">
-          <p>Preço total: R$<span id="precoTotal">00.00</span></p>
+      <div class="info__div info__div--price">
+        <p>Valor total dos itens exibidos:</p>
+        <h4 id="price"></h4>
+      </div>
+    </aside>
+    <main class="screen">
+      <section id="display"></section>
+      <section id="cart">
+        <h3 class="cart__title">Carrinho</h3>
+        <section id="cart__cards">
+        </section>
         </div>
-      </div>
+        <h3 class="cart__total">Total: <span class="cart__total--number">R$45,00</span></h3>
+      </section>
     </main>
-
-    <script type="module" src="src/script.js"></script>
+    <script src="https://kit.fontawesome.com/8fa2904e7b.js" crossorigin="anonymous"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>

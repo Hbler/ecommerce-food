@@ -47,7 +47,6 @@ function applyFitlers() {
 function search() {
   // variables
   const searched = conditionStr(SearchBar.value);
-  console.log(searched);
 
   displayInstance.toShow = [...Filter.bySearch(Produtcs, searched)];
   displayInstance.showProducts();

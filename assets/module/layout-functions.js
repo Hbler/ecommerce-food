@@ -55,11 +55,11 @@ function search() {
   let section = "";
 
   if (
-    input === "" ||
-    input === " " ||
-    input.includes("todos") ||
-    input.includes("todas") ||
-    input.includes("produtos")
+    searched === "" ||
+    searched === " " ||
+    searched.includes("todos") ||
+    searched.includes("todas") ||
+    searched.includes("produtos")
   ) {
     section = "Todos Produtos";
   } else {

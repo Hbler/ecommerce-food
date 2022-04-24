@@ -36,7 +36,7 @@ class Cart extends Display {
       this.createCard(obj, qtt);
     });
 
-    this.currentPrice();
+    this.currentPrice(this.products);
   }
 
   createCard(obj, qtt) {

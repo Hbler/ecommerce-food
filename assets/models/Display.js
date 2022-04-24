@@ -14,10 +14,12 @@ class Display {
     this.parent.innerHTML = "";
 
     // limit
-    const noRepeats = new Set(this.toShow);
+    const noRepeats = Array.from(new Set(this.toShow));
 
     // fill
     noRepeats.forEach((obj) => this.createCard(obj));
+
+    this.currentPrice(noRepeats);
   }
 
   createCard(obj) {
@@ -121,8 +123,8 @@ class Display {
     return nutri;
   }
 
-  currentPrice() {
-    const arr = [...this.products];
+  currentPrice(array) {
+    const arr = [...array];
     const total = arr.reduce((t, obj) => {
       const price = obj.promocao ? obj.precoPromocao : obj.preco;
       return t + +price;

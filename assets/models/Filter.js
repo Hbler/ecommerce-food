@@ -16,8 +16,14 @@ class Filter {
   }
 
   static bySearch(products, input) {
-    if (input === "" || input.includes("todos") || input.includes("produtos")) {
-      section = "Todos Produtos";
+    if (
+      input === "" ||
+      input === " " ||
+      input.includes("todos") ||
+      input.includes("todas") ||
+      input.includes("produtos")
+    ) {
+      console.log("test");
       return products;
     } else {
       const foundProducts = products.filter((obj) => {

@@ -47,6 +47,7 @@ function applyFitlers() {
 function search() {
   // variables
   const searched = conditionStr(SearchBar.value);
+  console.log(searched);
 
   displayInstance.toShow = [...Filter.bySearch(Produtcs, searched)];
   displayInstance.showProducts();
@@ -54,9 +55,11 @@ function search() {
   let section = "";
 
   if (
-    searched === "" ||
-    searched.includes("todos") ||
-    searched.includes("produtos")
+    input === "" ||
+    input === " " ||
+    input.includes("todos") ||
+    input.includes("todas") ||
+    input.includes("produtos")
   ) {
     section = "Todos Produtos";
   } else {

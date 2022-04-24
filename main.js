@@ -40,9 +40,9 @@ createFilters(Sections, Filters);
 
 displayInstance.toShow = Produtcs;
 displayInstance.showProducts();
-displayInstance.currentPrice();
+displayInstance.currentPrice(displayInstance.products);
 
-cartInstance.currentPrice();
+cartInstance.currentPrice(cartInstance.products);
 
 //// Export
 export { displayInstance };
